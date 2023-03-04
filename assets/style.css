@@ -314,10 +314,14 @@ html{
 .product .box-container .box .icons {
 	position: absolute;
 	top: 5rem;
-	right: 1rem;
-   
+	right: -6rem;
+   display: none;
 }
 
+.product .box-container .box:hover .icons {
+	right:1rem; 
+	display: initial;
+}
 
 
 
@@ -333,13 +337,177 @@ html{
 	margin-top: 0.7rem;
 	align-items: center;
 	text-align: center;
+	color:var(--green);
+}
+
+.product .box-container .box .icons a:hover { 
+	background: var(--green);
+	color: #fff;
+}
+
+
+.product .box-container .box h3{
+	font-size: 2.5rem;
+	color:var(--black) ; 
+}
+
+.product .box-container .box .stars i {
+	font-size: 1.7rem;
+	color: gold;
+	padding: 1rem 0.1rem;
+}
+
+.product .box-container .box .price {
+	font-size: 1.5rem;
+	color: var(--black);
+	padding: 1rem .1rem;
+	
+}
+
+.product .box-container .box .price span{
+	font-size: 1.7rem;
+	color: var(--black);
+	padding: 1rem .1rem;
+	text-decoration: line-through;
+}
+
+.product .box-container .box .quantity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* padding: 1rem .1rem; */
+	padding-top: 1rem;
+} 
+
+.product .box-container .box .quantity span{
+	padding: 0.7rem;
+	font-size: 1.7rem;
+}
+
+
+.product .box-container .box .quantity input {
+	border: .1rem solid var(--black);
+	padding: 0.5rem;
+	border-radius: .5rem;
+	font-size: 1.7rem;
+}
+
+.product .box-container .box .btn{
+	display: block;
+}
+
+.deal {
+	background: url(../assets/images/slider31.webp);
+	background-position: center;
+	background-size: cover;
+	padding-top: 1.7rem;
+	padding-bottom: 1.7rem;
+}
+
+.deal .content {
+	max-width: 50rem;
+	height: 40rem;
+	margin-top: 10rem;
+} 
+
+.deal .content .title {
+	font-size: 4rem;
+	color: var(--black);
+}
+
+.deal .content p {
+	color: #333;
+	font-size: 1.7rem;
+	padding: 0rem 1rem;
 }
 
 
 
 
+.deal .content .count-down {
+
+	display: flex;
+	gap: 1.5rem;
+
+}
 
 
+.deal .content .count-down .box {
+	/* display: flex; */
+	gap: 1.5rem;
+	border: .1rem solid var(--black);
+	padding: 2rem;
+	margin-top: 1.5rem;
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.contact form {
+	border: .1rem solid var(--black);
+	text-align: center;
+	padding: 3rem 5rem;
+}
+
+.contact form .inputbox {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem 2rem;
+	justify-content: space-between;
+}
+
+.contact form .inputbox input {
+	border: .1rem solid var(--black);
+	padding: 2rem;
+	border-radius: 5px;
+	width: 48%;
+	gap: 3.1rem;
+	margin-top: 6.1rem;
+	background: #cdcdd842;
+	font-size: 1.7rem;
+}
+
+
+.textareas {
+	width: 96%;
+	border: .1rem solid var(--black);
+	margin: 6.1rem auto;
+	background: #cdcdd842;
+	font-size: 1.7rem;
+}
+
+
+.newsletter {
+	border: .1rem solid #333;
+	background: url(../assets/images/slider31.webp);
+	text-align: center;
+	background-size:cover;
+	background-position:center;
+	padding:5rem 2rem; 
+}
+
+.newsletter input {
+	background: #fff;
+	padding: 2rem 2rem;
+	border: .1rem solid var(--green);
+	font-size: 1.5rem;
+	border-radius: .5rem;
+	display:flex ;
+}
+
+.newsletter form {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 1rem auto;
+	/* background: rgba(0,0,0,0.1); */
+}
+
+.newsletter .btn {
+	margin: 0px !important;
+	text-align: center;
+	padding: 20px 27px;
+	border-radius: 0px;
+}
 
 
 /* media queries for responsive */ 
@@ -402,6 +570,14 @@ html{
     text-align: center;
    }
 
+
+   .contact form .inputbox input {
+
+	width: 98%;
+	margin-top: 3rem;
+}
+
+
 }
 
 @media(max-width:450px){ 
@@ -414,12 +590,21 @@ html{
     flex-flow: column;
   }
 
-  .header-1 .search-box-container {
+.header-1 .search-box-container {
 	width: 100%;
 	margin-top: 2rem;
 }
 .logo{
     font-size:2.5rem; 
+}
+
+
+.deal{
+	text-align: center;
+}
+
+.deal .content{
+	
 }
 
 
@@ -430,6 +615,17 @@ html{
       margin-top: 2rem;
     }
 
+  .product .box-container{
+	display: block;
+   }
+
+.product .box-container .box .quantity{
+	display: inline;
+}
+
+.product .box-container .box .quantity input{
+	width: 100%;
+}
 
 
 }
